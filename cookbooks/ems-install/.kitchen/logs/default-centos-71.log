@@ -1,0 +1,113 @@
+I, [2015-12-17T01:02:44.505823 #6276]  INFO -- default-centos-71: -----> Converging <default-centos-71>...
+I, [2015-12-17T01:02:44.513332 #6276]  INFO -- default-centos-71: Preparing files for transfer
+I, [2015-12-17T01:02:44.515332 #6276]  INFO -- default-centos-71: Preparing dna.json
+I, [2015-12-17T01:02:44.526839 #6276]  INFO -- default-centos-71: Resolving cookbook dependencies with Berkshelf 4.0.1...
+I, [2015-12-17T01:02:45.896206 #6276]  INFO -- default-centos-71: Removing non-cookbook files before transfer
+I, [2015-12-17T01:02:45.996304 #6276]  INFO -- default-centos-71: Preparing validation.pem
+I, [2015-12-17T01:02:46.002813 #6276]  INFO -- default-centos-71: Preparing client.rb
+I, [2015-12-17T01:02:46.688473 #6276]  INFO -- default-centos-71: -----> Chef Omnibus installation detected (install only if missing)
+I, [2015-12-17T01:02:46.974700 #6276]  INFO -- default-centos-71: Transferring files to <default-centos-71>
+I, [2015-12-17T01:02:53.077244 #6276]  INFO -- default-centos-71: Starting Chef Client, version 12.5.1
+I, [2015-12-17T01:02:55.375660 #6276]  INFO -- default-centos-71: resolving cookbooks for run list: ["ems-install::default"]
+I, [2015-12-17T01:02:55.938818 #6276]  INFO -- default-centos-71: Synchronizing Cookbooks:
+I, [2015-12-17T01:02:55.951827 #6276]  INFO -- default-centos-71:   - ems-install (0.1.0)
+I, [2015-12-17T01:02:55.953827 #6276]  INFO -- default-centos-71:   - java (1.36.0)
+I, [2015-12-17T01:02:55.954329 #6276]  INFO -- default-centos-71:   - apt (2.9.2)
+I, [2015-12-17T01:02:55.967837 #6276]  INFO -- default-centos-71: Compiling Cookbooks...
+I, [2015-12-17T01:02:56.064902 #6276]  INFO -- default-centos-71: Converging 17 resources
+I, [2015-12-17T01:02:56.064902 #6276]  INFO -- default-centos-71: Recipe: ems-install::users
+I, [2015-12-17T01:02:56.065403 #6276]  INFO -- default-centos-71:   * group[tibesb] action create (up to date)
+I, [2015-12-17T01:02:56.081414 #6276]  INFO -- default-centos-71:  (up to date)
+I, [2015-12-17T01:02:56.081414 #6276]  INFO -- default-centos-71: Recipe: ems-install::directories
+I, [2015-12-17T01:02:56.081913 #6276]  INFO -- default-centos-71:   * directory[/apps/tibco/ems] action create (up to date)
+I, [2015-12-17T01:02:56.087417 #6276]  INFO -- default-centos-71:  (up to date)
+I, [2015-12-17T01:02:56.087917 #6276]  INFO -- default-centos-71: Recipe: ems-install::s3download
+I, [2015-12-17T01:02:56.101428 #6276]  INFO -- default-centos-71:  (up to date)
+I, [2015-12-17T01:03:25.024380 #6276]  INFO -- default-centos-71: 
+I, [2015-12-17T01:03:28.107960 #6276]  INFO -- default-centos-71: 
+I, [2015-12-17T01:03:28.107960 #6276]  INFO -- default-centos-71:     - update content in file /tmp/ems/TIB_ems_8.2.2_linux_x86.zip from none to f7bfeb
+I, [2015-12-17T01:03:28.108460 #6276]  INFO -- default-centos-71:     (file sizes exceed 10000000 bytes, diff output suppressed)
+I, [2015-12-17T01:03:28.108460 #6276]  INFO -- default-centos-71:     - change mode from '' to '0777'
+I, [2015-12-17T01:03:28.108960 #6276]  INFO -- default-centos-71:     - change owner from '' to 'root'
+I, [2015-12-17T01:03:28.425193 #6276]  INFO -- default-centos-71: 
+I, [2015-12-17T01:03:28.425193 #6276]  INFO -- default-centos-71:     - restore selinux security context
+I, [2015-12-17T01:03:38.385591 #6276]  INFO -- default-centos-71:  (up to date)
+I, [2015-12-17T01:03:48.286523 #6276]  INFO -- default-centos-71: 
+I, [2015-12-17T01:03:48.287023 #6276]  INFO -- default-centos-71:     - execute unzip /tmp/ems/TIB_ems_8.2.2_linux_x86.zip
+I, [2015-12-17T01:03:48.287023 #6276]  INFO -- default-centos-71:   * file[/tmp/ems/TIBCOUniversalInstaller-lnx-x86.bin] action create (up to date)
+I, [2015-12-17T01:03:48.287023 #6276]  INFO -- default-centos-71: Recipe: ems-install::responsefile
+I, [2015-12-17T01:03:48.605978 #6276]  INFO -- default-centos-71: 
+I, [2015-12-17T01:03:48.607934 #6276]  INFO -- default-centos-71: 
+I, [2015-12-17T01:03:48.607934 #6276]  INFO -- default-centos-71:     - update content in file /tmp/ems/emsInstallResponseFile.silent from none to 11d13e
+I, [2015-12-17T01:03:48.607934 #6276]  INFO -- default-centos-71:     --- /tmp/ems/emsInstallResponseFile.silent	2015-12-17 07:03:48.593027000 +0000
+I, [2015-12-17T01:03:48.608910 #6276]  INFO -- default-centos-71:     +++ /tmp/ems/.emsInstallResponseFile.silent20151217-24245-1aoayk1	2015-12-17 07:03:48.592027000 +0000
+I, [2015-12-17T01:03:48.608910 #6276]  INFO -- default-centos-71:     @@ -1 +1,50 @@
+I, [2015-12-17T01:03:48.608910 #6276]  INFO -- default-centos-71:     +<?xml  version="1.0"?>
+I, [2015-12-17T01:03:48.608910 #6276]  INFO -- default-centos-71:     +<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+I, [2015-12-17T01:03:48.608910 #6276]  INFO -- default-centos-71:     +<properties>
+I, [2015-12-17T01:03:48.608910 #6276]  INFO -- default-centos-71:     +<comment>---Universal Installer Silent Installation Properties---</comment>
+I, [2015-12-17T01:03:48.609889 #6276]  INFO -- default-centos-71:     +
+I, [2015-12-17T01:03:48.609889 #6276]  INFO -- default-centos-71:     +<!-- Accept the license agreement -->
+I, [2015-12-17T01:03:48.609889 #6276]  INFO -- default-centos-71:     +<entry key="acceptLicense">true</entry>
+I, [2015-12-17T01:03:48.609889 #6276]  INFO -- default-centos-71:     +
+I, [2015-12-17T01:03:48.609889 #6276]  INFO -- default-centos-71:     +<!-- The root installation directory -->
+I, [2015-12-17T01:03:48.610868 #6276]  INFO -- default-centos-71:     +<!-- If the product does not support multiple instances and TIBCO_HOME has already been set then -->
+I, [2015-12-17T01:03:48.610868 #6276]  INFO -- default-centos-71:     +<!-- this value is ignored and the existing TIBCO_HOME is used as the installation root. -->
+I, [2015-12-17T01:03:48.610868 #6276]  INFO -- default-centos-71:     +<entry key="installationRoot">/apps/tibco/ems</entry>
+I, [2015-12-17T01:03:48.610868 #6276]  INFO -- default-centos-71:     +
+I, [2015-12-17T01:03:48.610868 #6276]  INFO -- default-centos-71:     +<!-- If using an existing environment then the installationRoot AND environmentName MUST match a pre-existing environment. -->
+I, [2015-12-17T01:03:48.610868 #6276]  INFO -- default-centos-71:     +<!-- If creating a new environment then the installationRoot AND environmentName MUST BE UNIQUE and not match a pre-existing environment. -->
+I, [2015-12-17T01:03:48.610868 #6276]  INFO -- default-centos-71:     +<entry key="environmentName">TIBCO_HOME</entry>
+I, [2015-12-17T01:03:48.611844 #6276]  INFO -- default-centos-71:     +<!-- This only needs to be used for the macos power platform. -->
+I, [2015-12-17T01:03:48.611844 #6276]  INFO -- default-centos-71:     +<entry key="environmentDesc">my installation</entry>
+I, [2015-12-17T01:03:48.611844 #6276]  INFO -- default-centos-71:     +
+I, [2015-12-17T01:03:48.611844 #6276]  INFO -- default-centos-71:     +<!-- configDirectoryRoot - location of configuration files if it does not already exist -->
+I, [2015-12-17T01:03:48.611844 #6276]  INFO -- default-centos-71:     +<entry key="configDirectoryRoot">/apps/tibco/config/ems</entry>
+I, [2015-12-17T01:03:48.611844 #6276]  INFO -- default-centos-71:     +
+I, [2015-12-17T01:03:48.611844 #6276]  INFO -- default-centos-71:     +<!-- The following configuration parameters control the download of Hibernate -->
+I, [2015-12-17T01:03:48.611844 #6276]  INFO -- default-centos-71:     +<!-- LGPLAssemblyLicenseAccepted - true or false to accept the license -->
+I, [2015-12-17T01:03:48.612823 #6276]  INFO -- default-centos-71:     +<!-- LGPLAssemblyDownload - true or false to download the assembly from the public TIBCO server -->
+I, [2015-12-17T01:03:48.612823 #6276]  INFO -- default-centos-71:     +<!-- LGPLAssemblyPath - if LGPLAssemblyDownload is false, this is the path where the Hibernate assembly is located on the system -->
+I, [2015-12-17T01:03:48.612823 #6276]  INFO -- default-centos-71:     +<entry key="LGPLAssemblyLicenseAccepted">true</entry>
+I, [2015-12-17T01:03:48.612823 #6276]  INFO -- default-centos-71:     +<entry key="LGPLAssemblyDownload">true</entry>
+I, [2015-12-17T01:03:48.612823 #6276]  INFO -- default-centos-71:     +<entry key="LGPLAssemblyPath">/apps/tibco/thirdpartyDownload</entry>
+I, [2015-12-17T01:03:48.613799 #6276]  INFO -- default-centos-71:     +
+I, [2015-12-17T01:03:48.613799 #6276]  INFO -- default-centos-71:     +<!--Product Feature Settings-->
+I, [2015-12-17T01:03:48.613799 #6276]  INFO -- default-centos-71:     +<entry key="feature_EMS Server Baseline_ems">true</entry>
+I, [2015-12-17T01:03:48.613799 #6276]  INFO -- default-centos-71:     +<entry key="feature_Development Kit_ems">true</entry>
+I, [2015-12-17T01:03:48.613799 #6276]  INFO -- default-centos-71:     +<entry key="feature_EMS Client Baseline_ems">true</entry>
+I, [2015-12-17T01:03:48.614772 #6276]  INFO -- default-centos-71:     +<entry key="feature_EMS Source_ems">true</entry>
+I, [2015-12-17T01:03:48.614772 #6276]  INFO -- default-centos-71:     +<entry key="feature_Hibernate (For Database Stores)_ems">false</entry>
+I, [2015-12-17T01:03:48.614772 #6276]  INFO -- default-centos-71:     +
+I, [2015-12-17T01:03:48.614772 #6276]  INFO -- default-centos-71:     +<!-- Product-specific properties can be set below using the same 'entry key=' format as above. -->
+I, [2015-12-17T01:03:48.614772 #6276]  INFO -- default-centos-71:     +<!-- ONLY applicable for Windows platforms: -->
+I, [2015-12-17T01:03:48.614772 #6276]  INFO -- default-centos-71:     +<!--  manualRB - values can be true or false -->
+I, [2015-12-17T01:03:48.615751 #6276]  INFO -- default-centos-71:     +<!--  autoRB - values can be true or false -->
+I, [2015-12-17T01:03:48.615751 #6276]  INFO -- default-centos-71:     +<!--  Only one can be true, the default will be manual. -->
+I, [2015-12-17T01:03:48.615751 #6276]  INFO -- default-centos-71:     +<entry key="manualRB">true</entry>
+I, [2015-12-17T01:03:48.615751 #6276]  INFO -- default-centos-71:     +<entry key="autoRB">false</entry>
+I, [2015-12-17T01:03:48.616729 #6276]  INFO -- default-centos-71:     +<entry key="setUID">false</entry>
+I, [2015-12-17T01:03:48.616729 #6276]  INFO -- default-centos-71:     +<!-- configFile - values can be the default value or a file that already exists -->
+I, [2015-12-17T01:03:48.616729 #6276]  INFO -- default-centos-71:     +<!-- If an invalid value is added, the default value will be used -->
+I, [2015-12-17T01:03:48.616729 #6276]  INFO -- default-centos-71:     +<entry key="configFile">/apps/tibco/cfgmgmt/ems/data/tibemsd.conf</entry>
+I, [2015-12-17T01:03:48.617710 #6276]  INFO -- default-centos-71:     +</properties>
+I, [2015-12-17T01:03:49.139781 #6276]  INFO -- default-centos-71: 
+I, [2015-12-17T01:03:49.140760 #6276]  INFO -- default-centos-71:     - restore selinux security context
+I, [2015-12-17T01:03:49.140760 #6276]  INFO -- default-centos-71: Recipe: java::set_java_home
+I, [2015-12-17T01:03:49.140760 #6276]  INFO -- default-centos-71:   * ruby_block[set-env-java-home] action run (skipped due to not_if)
+I, [2015-12-17T01:03:49.140760 #6276]  INFO -- default-centos-71:   * directory[/etc/profile.d] action create (up to date)
+I, [2015-12-17T01:03:49.279591 #6276]  INFO -- default-centos-71:  (up to date)
+I, [2015-12-17T01:03:49.344049 #6276]  INFO -- default-centos-71: 
+I, [2015-12-17T01:03:49.344049 #6276]  INFO -- default-centos-71:     - execute the ruby block Set JAVA_HOME in /etc/environment
+I, [2015-12-17T01:03:49.345026 #6276]  INFO -- default-centos-71: Recipe: java::oracle
+I, [2015-12-17T01:03:49.345026 #6276]  INFO -- default-centos-71:   * yum_package[tar] action install (up to date)
+I, [2015-12-17T01:03:49.345026 #6276]  INFO -- default-centos-71:   * java_ark[jdk] action install (up to date)
+I, [2015-12-17T01:03:54.652316 #6276]  INFO -- default-centos-71:  (up to date)
+I, [2015-12-17T01:03:54.653293 #6276]  INFO -- default-centos-71: Recipe: ems-install::installems
+I, [2015-12-17T01:05:27.256889 #6276]  INFO -- default-centos-71: 
+I, [2015-12-17T01:05:27.257867 #6276]  INFO -- default-centos-71:     - execute /tmp/ems/TIBCOUniversalInstaller-lnx-x86.bin -silent -V responseFile=/tmp/ems/emsInstallResponseFile.silent
+I, [2015-12-17T01:05:27.562217 #6276]  INFO -- default-centos-71: 
+I, [2015-12-17T01:05:27.566717 #6276]  INFO -- default-centos-71: Running handlers:
+I, [2015-12-17T01:05:27.566717 #6276]  INFO -- default-centos-71: Running handlers complete
+I, [2015-12-17T01:05:27.580731 #6276]  INFO -- default-centos-71: Chef Client finished, 5/18 resources updated in 02 minutes 34 seconds
+I, [2015-12-17T01:05:29.885701 #6276]  INFO -- default-centos-71: Finished converging <default-centos-71> (2m45.37s).

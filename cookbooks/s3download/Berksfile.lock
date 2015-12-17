@@ -1,0 +1,9 @@
+DEPENDENCIES
+  s3download
+    path: .
+    metadata: true
+
+GRAPH
+  s3_file (2.6.5)
+  s3download (0.1.0)
+    s3_file (~> 2.6.5)
