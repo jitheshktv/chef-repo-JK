@@ -1,47 +1,52 @@
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
+# Chef
+.chef/*.pem
+.chef/encrypted_data_bag_secret
 
-# Folder config file
-Desktop.ini
+# Ruby
+.rake_test_cache
+.rvmrc
+.rbenv-version
 
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+.elc
+auto-save-list
+tramp
+.\#*
 
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
+# Emacs org-mode
+.org-id-locations
+*_archive
 
-# Windows shortcuts
-*.lnk
+# SublimeText
+*.sublime-workspace
 
-# =========================
-# Operating System Files
-# =========================
+# TextMate
+*.tmproj
+*.tmproject
+tmtags
 
-# OSX
-# =========================
+# Vim
+.*.s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
 
+# OS X
 .DS_Store
 .AppleDouble
 .LSOverride
-
-# Thumbnails
+Icon
 ._*
-
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
 .Spotlight-V100
-.TemporaryItems
 .Trashes
-.VolumeIcon.icns
 
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
